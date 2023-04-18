@@ -25,7 +25,7 @@ BayesQVGEL(
 
 \item{e}{the matrix of a group of dummy environmental factors variables.}
 
-\item{C}{the matrix of time effects.}
+\item{C}{the matrix of the intercept and time effects(time effects are optional).}
 
 \item{g}{the matrix of predictors (genetic factors) without intercept. Each row should be an observation vector.}
 

@@ -4,7 +4,7 @@
 #' @param g the matrix of predictors (genetic factors) without intercept. Each row should be an observation vector.
 #' @param y the matrix of response variable. The current version of BayesQVGEL only supports continuous response.
 #' @param e the matrix of a group of dummy environmental factors variables.
-#' @param C the matrix of time effects.
+#' @param C the matrix of the intercept and time effects(time effects are optional).
 #' @param w the matrix of interactions between genetic factors and environmental factors.
 #' @param k the total number of time points.
 #' @param iterations the number of MCMC iterations.
