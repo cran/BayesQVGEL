@@ -24,13 +24,13 @@
 #' @examples
 #' data(data)
 #' ## sparse
-#' fit=BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
 #' selected=selection(fit,sparse=TRUE)
 #' selected
 #'
 #' \donttest{
 #' ## non-sparse
-#' fit=BayesQVGEL(y,e,C,g,w,k,sparse=FALSE,structure=c("group"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,sparse=FALSE,structure=c("group"))
 #' selected=selection(fit,sparse=FALSE)
 #' selected
 #' }

@@ -16,7 +16,7 @@
 #' \deqn{Y_{ij} = X_{ij}^{T}\gamma_{0}+E_{ij}^{T}\gamma_{1}+G_{ij}^{T}\gamma_{2}+(G_{ij}\bigotimes E_{ij})^{T}\gamma_{3}+Z_{ij}^{T}\alpha_{i}+\epsilon_{ij}.}
 #' where \eqn{\gamma_{1}},\eqn{\gamma_{2}},\eqn{\gamma_{3}} are \eqn{p},\eqn{m} and \eqn{mp} dimensional vectors that represent the coefficients of the environment effects, the genetics effects and interactions effects, respectively. Accommodating the Kronecker product of the \eqn{m} - dimensional vector \eqn{G_{ij}} and the \eqn{p}-dimensional vector \eqn{E_{ij}}, the interactions between genetics and environment factors can be expressed as a \eqn{mp}-dimensional vector, denoted as the following form:
 #' \deqn{G_{ij}\bigotimes E_{ij} = [E_{ij1}E_{ij1},E_{ij2}E_{ij2},...,E_{ij1}E_{ijp},E_{ij2}E_{ij1},...,E_{ijm}E_{ijp}]^{T}.}
-#' When \eqn{h=1}, the model becomes a mixed-effects model with random intercept only.
+#' When \eqn{Z_{ij}^{T} = (1,j)} and  \eqn{\alpha_{i} = (\alpha_{i1},\alpha_{i2})^{T}}, the model becomes random intercept and slope model. When \eqn{Z_{ij}^{T} = 1} and \eqn{\alpha_{i} = \alpha_{i1}}, the model becomes random intercept model.
 #'
 #' @examples
 #' data(data)

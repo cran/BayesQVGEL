@@ -1,10 +1,10 @@
-#' fit a Bayesian quantile variable selection for g - e in longitudinal studies
+#' fit a Bayesian variable selection for G - E in longitudinal quantile regression
 #'
 #' @keywords models
 #' @param g the matrix of predictors (genetic factors) without intercept. Each row should be an observation vector.
 #' @param y the matrix of response variable. The current version of BayesQVGEL only supports continuous response.
 #' @param e the matrix of a group of dummy environmental factors variables.
-#' @param C the matrix of the intercept and time effects(time effects are optional).
+#' @param C the matrix of the intercept and time effects (time effects are optional).
 #' @param w the matrix of interactions between genetic factors and environmental factors.
 #' @param k the total number of time points.
 #' @param iterations the number of MCMC iterations.
@@ -46,7 +46,7 @@
 #'
 #' ## default method
 
-#' fit=BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
 #' fit$coefficient
 #'
 #'## Compute TP and FP
@@ -59,15 +59,15 @@
 
 #' \donttest{
 #' ## alternative: robust individual selection
-#' fit=BayesQVGEL(y,e,C,g,w,k,structure=c("individual"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,structure=c("individual"))
 #' fit$coefficient
 #'
 #' ## alternative: non-robust group selection
-#' fit=BayesQVGEL(y,e,C,g,w,k,robust=FALSE, structure=c("group"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,robust=FALSE, structure=c("group"))
 #' fit$coefficient
 #'
 #' ## alternative: robust group selection under random intercept model
-#' fit=BayesQVGEL(y,e,C,g,w,k,slope=FALSE, structure=c("group"))
+#' fit = BayesQVGEL(y,e,C,g,w,k,slope=FALSE, structure=c("group"))
 #' fit$coefficient
 #'
 #' }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/BayesQVGEL.R
 \name{BayesQVGEL}
 \alias{BayesQVGEL}
-\title{fit a Bayesian quantile variable selection for g - e in longitudinal studies}
+\title{fit a Bayesian variable selection for G - E in longitudinal quantile regression}
 \usage{
 BayesQVGEL(
   y,
@@ -25,7 +25,7 @@ BayesQVGEL(
 
 \item{e}{the matrix of a group of dummy environmental factors variables.}
 
-\item{C}{the matrix of the intercept and time effects(time effects are optional).}
+\item{C}{the matrix of the intercept and time effects (time effects are optional).}
 
 \item{g}{the matrix of predictors (genetic factors) without intercept. Each row should be an observation vector.}
 
@@ -55,7 +55,7 @@ an object of class `BayesQVGEL' is returned, which is a list with component:
 \item{iterations}{the total number of iterations.}
 }
 \description{
-fit a Bayesian quantile variable selection for g - e in longitudinal studies
+fit a Bayesian variable selection for G - E in longitudinal quantile regression
 }
 \details{
 Consider the data model described in "\code{\link{data}}":
@@ -81,7 +81,7 @@ Please check the references for more details about the prior distributions.
 data(data)
 
 ## default method
-fit=BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
+fit = BayesQVGEL(y,e,C,g,w,k,structure=c("group"))
 fit$coefficient
 
 ## Compute TP and FP
@@ -93,15 +93,15 @@ fp = length(pos) - tp
 list(tp=tp, fp=fp)
 \donttest{
 ## alternative: robust individual selection
-fit=BayesQVGEL(y,e,C,g,w,k,structure=c("individual"))
+fit = BayesQVGEL(y,e,C,g,w,k,structure=c("individual"))
 fit$coefficient
 
 ## alternative: non-robust group selection
-fit=BayesQVGEL(y,e,C,g,w,k,robust=FALSE, structure=c("group"))
+fit = BayesQVGEL(y,e,C,g,w,k,robust=FALSE, structure=c("group"))
 fit$coefficient
 
 ## alternative: robust group selection under random intercept model
-fit=BayesQVGEL(y,e,C,g,w,k,slope=FALSE, structure=c("group"))
+fit = BayesQVGEL(y,e,C,g,w,k,slope=FALSE, structure=c("group"))
 fit$coefficient
 
 }
